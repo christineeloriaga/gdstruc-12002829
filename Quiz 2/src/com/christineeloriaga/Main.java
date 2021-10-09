@@ -1,33 +1,35 @@
 package com.christineeloriaga;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Player> playerList = new ArrayList<>();
+       LinkedList linkedList = new LinkedList();
 
-        playerList.add(new Player(1, "Kaeya", 90));
-        playerList.add(new Player(2, "Diluc", 70));
-        playerList.add(new Player(3, "Venti", 52));
+        Player kaeya = new Player(1, "Kaeya", 90);
+        Player diluc = new Player(2, "Diluc", 70);
+        Player venti = new Player(3, "Venti", 52);
+
+        linkedList.add(kaeya);
+        linkedList.add(diluc);
+        linkedList.add(venti);
+
+        System.out.println(linkedList);
 
         // Answer for No. 1
 
-        playerList.remove(1);
-            for (Player p : playerList)
-            {
-                System.out.println(p);
-         }
+        linkedList.removeFirst();
+        System.out.println(linkedList);
 
         // Answer for No. 2
 
-        System.out.print(playerList.size());
+        System.out.println(linkedList.size());
 
         // Answer for No. 3
 
-        System.out.print(playerList.contains(new Player(3,"Venti", 52)));
-        System.out.println("\n" + playerList.indexOf(new Player(3,"Venti", 52)));
+        System.out.println(linkedList.contains(new Player(3,"Venti", 52)));
+        System.out.println("\n" + linkedList.indexOf(new Player(3,"Venti", 52)));
     }
 }
