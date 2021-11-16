@@ -37,7 +37,7 @@ public class ArrayQueue {
         queue[front] = null;
         front++;
 
-        if (size() == 0) 
+        if (size() == 0)
         {
             front = 0;
             back = 0;
